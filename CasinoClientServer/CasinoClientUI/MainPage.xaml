@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CasinoClientUI.MainPage"
+             BackgroundColor="White"
+             Title="Casino Slots">
+<AbsoluteLayout>
+    <VerticalStackLayout AbsoluteLayout.LayoutBounds="0.5,0.1,0.9,0.9"
+        AbsoluteLayout.LayoutFlags="All"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        Padding="10"
+        Spacing="10">
+        <!-- Name of Casino -->
+        <Label x:Name="CasinoLabel"
+               Text="🎰 The House Always Wins 🎰"
+               FontSize="32"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="DarkBlue"/>
+
+        <!-- Player Name display -->
+        <Label x:Name="PlayerNameLabel"
+               Text="No player registered yet"
+               FontSize="24"
+               TextColor="Black"
+               HorizontalOptions="Center"/>
+
+        <!-- Name entry button -->
+        <Button x:Name="EnterButton"
+               Text="Enter"
+               Clicked="EnterButton_Clicked"
+               BackgroundColor="DarkRed"
+               TextColor="White"
+               FontSize="Medium"
+               HorizontalOptions="Center"/>
+
+<VerticalStackLayout x:Name="CasinoContainer" IsVisible="False" Padding="5" Spacing="5">
+        <!-- Slots display -->
+        <Grid x:Name="SlotsGrid" ColumnSpacing="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+        <!-- Slot 1 -->
+            <Grid Grid.Column="0" WidthRequest="200" HeightRequest="300">
+                <BoxView x:Name="Slot1" Color="LightGray" CornerRadius="0"/>
+                <Label x:Name="Slot1Label" Text="?" 
+                       HorizontalOptions="Center" VerticalOptions="Center" 
+                       FontSize="36" TextColor="White"/>
+            </Grid>
+        <!-- Slot 2 -->
+            <Grid Grid.Column="1" WidthRequest="200" HeightRequest="300">
+                <BoxView x:Name="Slot2" Color="LightGray" CornerRadius="0"/>
+                <Label x:Name="Slot2Label" Text="?" 
+                       HorizontalOptions="Center" VerticalOptions="Center" 
+                       FontSize="36" TextColor="White"/>
+            </Grid>
+        <!-- Slot 3 -->
+            <Grid Grid.Column="2" WidthRequest="200" HeightRequest="300">
+                <BoxView x:Name="Slot3" Color="LightGray" CornerRadius="0"/>
+                <Label x:Name="Slot3Label" Text="?" 
+                       HorizontalOptions="Center" VerticalOptions="Center" 
+                       FontSize="36" TextColor="White"/>
+            </Grid>
+        </Grid>
+        <!-- Play button -->
+        <Button x:Name="PlayButton"
+                Text="Play Slot Machine"
+                Clicked="PlayButton_Clicked"
+                BackgroundColor="DarkBlue"
+                TextColor="White"
+                FontSize="Medium"/>  
+        <!-- Balance display -->
+        <Label x:Name="BalanceLabel"
+               Text="Balance: $10"
+               FontSize="Large"
+               TextColor="Black"
+               HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+    <!--! Trick Button -->
+    <Button x:Name="CashOutButton"
+            Text="CASH OUT"
+            BackgroundColor="Green"
+            TextColor="White"
+            IsVisible="False"
+            AbsoluteLayout.LayoutBounds="0.5,0.9,100,50"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Clicked="CashOutButton_Clicked"
+            Pressed="CashOutButton_Pressed">
+        <Button.GestureRecognizers>
+            <PointerGestureRecognizer 
+                PointerEntered="OnCashOutButtonPointerEntered"
+                PointerExited="OnCashOutButtonPointerExited"/>
+        </Button.GestureRecognizers>
+    </Button>
+</AbsoluteLayout>
+</ContentPage>
