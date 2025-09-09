@@ -39,7 +39,7 @@ This will excute all the tests and output results on the terminal (tests the ser
 
 # Screenshots:
 
-![image](EnterName)
-![image](StartPage)
-![image](SlotRoll)
+![image](EnterName.png)
+![image](StartPage.png)
+![image](SlotRoll.png)
 
