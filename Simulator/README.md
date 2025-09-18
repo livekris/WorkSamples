@@ -16,13 +16,14 @@ This project simulates a temperature monitoring system using multithreading in C
 
 ## File Structure
 
-├── CMakeLists.txt # CMake build configuration
-├── main.cpp # Main program
-├── Sensor.h # Sensor class
-├── Logger.h # Logger class and utility functions
-├── temperature_log.txt # Output log for sensor readings (generated at runtime)
-└── fault_log.txt # Output log for faulty readings (generated at runtime)
-
+``` 
+├── CMakeLists.txt        # CMake build configuration
+├── main.cpp              # Main program
+├── Sensor.h              # Sensor class
+├── Logger.h              # Logger class and utility functions
+├── temperature_log.txt   # Output log for sensor readings (generated at runtime)
+└── fault_log.txt         # Output log for faulty readings (generated at runtime)
+```
 ## Prerequisites
 
 - C++17 compatible compiler (e.g., g++, clang++, MSVC)
