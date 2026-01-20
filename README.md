@@ -12,7 +12,8 @@ This account at the moment contains work samples I have accumulated over a decad
 
 📫 e-mail: kumbullakristina@gmail.com <br /><br />
 
-Publications in progress: <br /> <br />
+Articles in progress: <br /> <br />
+(no intention to publish)
 
 A Stability-Theoretic Framework for Human-AI Debate and Epistemic Judgment <br />
 📖 Quote: AI safety increasingly demands robust alignment protocols between human and artificial agents. One such
